@@ -571,7 +571,7 @@ Integrity Summary:
 ```
 1. Ask user language preference:
    "Which language version of the process record would you like to generate first?"
-   - Chinese (Traditional Chinese)
+   - Chinese (Simplified Chinese)
    - English
    - Both (default: generate the user's primary conversation language first)
 
