@@ -1,6 +1,6 @@
 ---
 name: academic-paper
-description: "Academic paper writing skill with 12-agent pipeline. v2.4: LaTeX output formatting hardening — mandatory apa7 class, text justification fix, table column width formula, bilingual abstract centering, standardized font stack, PDF must compile from LaTeX. Supports IMRaD, literature review, theoretical, case study, policy brief, and conference paper structures. APA 7.0 (default), Chicago, MLA, IEEE, Vancouver citation formats. Bilingual abstracts (zh-TW + EN). Multi-format output (LaTeX, DOCX, PDF, Markdown). Triggers on: write paper, academic paper, paper outline, write abstract, revise paper, check citations, convert to LaTeX, guide my paper, parse reviews, revision roadmap, 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 檢查引用, 引導我寫論文, 帶我規劃論文, 逐章規劃, 論文架構, 審查意見, 修訂路線圖."
+description: "Academic paper writing skill with 12-agent pipeline. v2.4: LaTeX output formatting hardening — mandatory apa7 class, text justification fix, table column width formula, bilingual abstract centering, standardized font stack, PDF must compile from LaTeX. Supports IMRaD, literature review, theoretical, case study, policy brief, and conference paper structures. APA 7.0 (default), Chicago, MLA, IEEE, Vancouver citation formats. Bilingual abstracts (zh-TW + EN; zh-CN on request). Multi-format output (LaTeX, DOCX, PDF, Markdown). Triggers on: write paper, academic paper, paper outline, write abstract, revise paper, check citations, convert to LaTeX, guide my paper, parse reviews, revision roadmap, 写论文, 学术论文, 论文大纲, 写摘要, 修改论文, 检查引用, 引导我写论文, 带我规划论文, 逐章规划, 论文架构, 审查意见, 修订路线图."
 metadata:
   version: "2.4"
   last_updated: "2026-03-08"
@@ -39,7 +39,7 @@ Write a paper on the impact of declining birth rates on private university manag
 
 **English**: write paper, academic paper, paper outline, write abstract, revise paper, literature review paper, check citations, convert to LaTeX, convert format, format paper, conference paper, journal article, thesis chapter, research paper, guide my paper, help me plan my paper, step by step paper, draft manuscript, write methodology, write discussion, parse reviews, revision roadmap, help me with my revision, I got reviewer comments, convert citations
 
-**繁體中文**: 寫論文, 學術論文, 論文大綱, 寫摘要, 修改論文, 文獻回顧論文, 檢查引用, 轉 LaTeX, 轉換格式, 研討會論文, 期刊文章, 學位論文, 研究論文, 引導我寫論文, 幫我規劃論文, 逐步寫論文, 寫方法論, 寫討論, 審查意見, 修訂路線圖, 幫我修改, 我收到審查意見, 轉換引用格式
+**简体中文**: 写论文, 学术论文, 论文大纲, 写摘要, 修改论文, 文献回顾论文, 检查引用, 转 LaTeX, 转换格式, 研讨会论文, 期刊文章, 学位论文, 研究论文, 引导我写论文, 帮我规划论文, 逐步写论文, 写方法论, 写讨论, 审查意见, 修订路线图, 帮我修改, 我收到审查意见, 转换引用格式
 
 ### Plan Mode Activation
 
@@ -56,7 +56,7 @@ Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **in
 **Default rule**: When intent is ambiguous between `plan` and `full`, **prefer `plan`** — it is safer to guide a user who needs help than to produce a paper they can't use. The user can always switch to `full` later.
 
 **Example triggers** (illustrative, not exhaustive):
-"guide my paper", "help me plan my paper", "I don't know how to start", 「引導我寫論文」「幫我規劃論文」, or equivalent in any language
+"guide my paper", "help me plan my paper", "I don't know how to start", 「引导我写论文」「帮我规划论文」, or equivalent in any language
 
 ### Does NOT Trigger
 
@@ -73,7 +73,7 @@ Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **in
 | Primary output | Publishable paper draft | Research report |
 | Structure | Journal-ready (IMRaD, etc.) | APA 7.0 report |
 | Citation | Multi-format (APA/Chicago/MLA/IEEE/Vancouver) | APA 7.0 only |
-| Abstract | Bilingual (zh-TW + EN) | Single language |
+| Abstract | Bilingual (zh-TW + EN; zh-CN on request) | Single language |
 | Peer review | Simulated 5-dimension review | Editorial review |
 | Output format | LaTeX/DOCX/PDF/Markdown | Markdown only |
 | Revision loop | Max 2 rounds with targeted feedback | Max 2 rounds |
@@ -90,7 +90,7 @@ Activate `plan` mode (Socratic chapter-by-chapter guidance) when the user's **in
 | 4 | `argument_builder_agent` | Argument construction, claim-evidence chains, logical flow, counter-argument handling; Plan mode argument stress test | Phase 3 / Plan Step 3 |
 | 5 | `draft_writer_agent` | Section-by-section full draft writing, discipline register adjustment, word count tracking | Phase 4 |
 | 6 | `citation_compliance_agent` | Citation format verification, reference list completeness, DOI checking | Phase 5a |
-| 7 | `abstract_bilingual_agent` | Bilingual abstract (zh-TW + EN), 5-7 keywords each | Phase 5b |
+| 7 | `abstract_bilingual_agent` | Bilingual abstract (zh-TW + EN; zh-CN on request), 5-7 keywords each | Phase 5b |
 | 8 | `peer_reviewer_agent` | Simulated double-blind review, five-dimension scoring, revision suggestions (max 2 rounds) | Phase 6 |
 | 9 | `formatter_agent` | Convert to LaTeX/DOCX/PDF/Markdown, journal formatting, cover letter, citation format conversion (APA 7 / Chicago / MLA / IEEE / Vancouver) | Phase 7 |
 | 10 | `socratic_mentor_agent` | Plan mode Socratic mentor: chapter-by-chapter guidance, convergence criteria (4 signals), question taxonomy (4 types), INSIGHT extraction | Plan Step 0-3 |
@@ -125,8 +125,8 @@ User: "Write a paper on [topic]"
          - Target journal (optional)
          - Citation format (APA 7 / Chicago / MLA / IEEE / Vancouver)
          - Output format (LaTeX / DOCX / PDF / Markdown / Combined)
-         - Language (EN / zh-TW / bilingual sections)
-         - Bilingual abstract (Yes / EN-only / zh-TW-only)
+         - Language (EN / zh-TW / zh-CN / bilingual sections)
+         - Bilingual abstract (Yes / EN-only / zh-TW-only / zh-CN-only)
          - Word count target
          - Existing materials (RQ, data, drafts, lit)
      |
@@ -181,9 +181,9 @@ User: "Write a paper on [topic]"
      |
      +-> [abstract_bilingual_agent] -> Bilingual Abstract + Keywords
          - English abstract (150-300 words, structured)
-         - Traditional Chinese abstract (300-500 characters, structured)
+         - Traditional Chinese abstract (300-500 characters, structured; zh-CN on request)
          - EN keywords (5-7)
-         - zh-TW keywords (5-7)
+         - zh-TW keywords (5-7; zh-CN on request)
          - Independent writing (not mechanical translation)
      |
 === Phase 6: PEER REVIEW ===
@@ -464,10 +464,10 @@ Also references from `deep-research`:
 5. **Word count compliance** — within +/-10% of target
 
 ### Bilingual Abstract Quality
-6. **Independent writing** — zh-TW and EN abstracts are independently composed, NOT mechanical translations
+6. **Independent writing** — zh-TW and EN abstracts are independently composed (zh-CN on request), NOT mechanical translations
 7. **Structural alignment** — both abstracts cover the same key points in the same order
 8. **Keywords** — 5-7 per language, reflecting the paper's core concepts
-9. **Word count** — EN: 150-300 words; zh-TW: 300-500 characters
+9. **Word count** — EN: 150-300 words; zh-TW: 300-500 characters (zh-CN on request)
 
 ### Citation Quality
 10. **Format compliance** — 100% adherence to selected citation style

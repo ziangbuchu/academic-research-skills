@@ -4,7 +4,7 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Sponsor](https://img.shields.io/badge/sponsor-Buy%20Me%20a%20Coffee-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/crucify020v)
 
-[繁體中文版](README.zh-TW.md)
+[简体中文版](README.zh-CN.md)
 
 A comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
 
@@ -304,13 +304,13 @@ You: "status"
 
 ### Supported Languages
 
-- **Traditional Chinese** (繁體中文) — default when user writes in Chinese
+- **Simplified Chinese** (简体中文) — default when user writes in Chinese
 - **English** — default when user writes in English
 - Bilingual abstracts (Chinese + English) for academic papers
 
 > **Using a different language?** Socratic mode (deep-research) and Plan mode (academic-paper) use **intent-based activation** — they detect the meaning of your request, not specific keywords. This means they work in **any language** without modification.
 >
-> However, the general `Trigger Keywords` section (which determines whether the skill is activated at all) still lists English and Traditional Chinese keywords. If you find the skill isn't activating reliably in your language, you can add your language's keywords to the `### Trigger Keywords` section in each `SKILL.md` file to improve matching confidence.
+> However, the general `Trigger Keywords` section (which determines whether the skill is activated at all) still lists English and Simplified Chinese keywords. If you find the skill isn't activating reliably in your language, you can add your language's keywords to the `### Trigger Keywords` section in each `SKILL.md` file to improve matching confidence.
 
 ### Supported Citation Formats
 
@@ -462,8 +462,8 @@ https://github.com/Imbad0202/academic-research-skills
 - Two-layer architecture: Layer 1 (skill activation) uses bilingual keywords for matching confidence; Layer 2 (mode routing) uses language-agnostic intent signals.
 
 ### v2.6.1 (2026-03-09) — Bilingual Trigger Keywords
-- **deep-research**: Added Traditional Chinese trigger keywords for general activation and Socratic mode.
-- **academic-paper**: Added Traditional Chinese trigger keywords and Plan Mode trigger section.
+- **deep-research**: Added Simplified Chinese trigger keywords for general activation and Socratic mode.
+- **academic-paper**: Added Simplified Chinese trigger keywords and Plan Mode trigger section.
 - Both mode selection guides now include bilingual examples and Chinese-specific misselection scenarios.
 
 ### v2.6 / v2.4 / v1.4 (2026-03-08) — 15+ Improvements

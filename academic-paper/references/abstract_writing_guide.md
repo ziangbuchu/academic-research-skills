@@ -85,7 +85,7 @@ State the significance, practical implications, or recommendations.
 >
 > **Keywords**: higher education, enrollment decline, private universities, institutional strategy, Taiwan
 
-## Traditional Chinese Abstract Guidelines
+## Traditional Chinese Abstract Guidelines (Simplified Chinese on request)
 
 ### Word Count
 - Standard: 300-500 characters

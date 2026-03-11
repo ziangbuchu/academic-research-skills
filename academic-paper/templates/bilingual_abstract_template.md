@@ -1,7 +1,7 @@
 # Bilingual Abstract Template
 
 ## Usage
-Use this template when writing bilingual abstracts (English + Traditional Chinese). Each version must be independently composed — not a translation of the other.
+Use this template when writing bilingual abstracts (English + Traditional Chinese by default; Simplified Chinese on request). Each version must be independently composed — not a translation of the other.
 
 ---
 
@@ -25,7 +25,7 @@ Use this template when writing bilingual abstracts (English + Traditional Chines
 
 ---
 
-## Chinese Abstract (zh-TW)
+## Chinese Abstract (zh-TW by default; zh-CN on request)
 
 ### [Paper Title in Chinese]
 
@@ -47,7 +47,7 @@ Use this template when writing bilingual abstracts (English + Traditional Chines
 
 ## Quality Checklist
 
-| Check | EN | zh-TW |
+| Check | EN | zh-TW (or zh-CN) |
 |-------|:--:|:-----:|
 | Covers all 5 components (Background, Purpose, Method, Findings, Implications) | ☐ | ☐ |
 | Within word count range | ☐ | ☐ |
